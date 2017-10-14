@@ -4,7 +4,7 @@ import time
 def isPrime(x):
     n=2
     if x==0 or x==1 :return False
-    while n <= x/2:
+    while n <= x**0.5:
         if x%n==0:return False
         n+=1
     return True
@@ -18,12 +18,12 @@ def getPrimesOld(bound):
         i+=1
     return primes
 
-bound = 100000
-    
+bound = 1000
+
 t1 = time.time()
 primes1 = getPrimesOld(bound)
 print("time elapse : " + str(time.time() - t1))
-#print(primes1)
+print(primes1)
 
         
 #............................prime sieve
@@ -45,5 +45,5 @@ def getPrimes(bound):
 t2 = time.time()
 primes2 = getPrimes(bound)
 print("time elapse : " + str(time.time() - t2))
-#print(primes2)
+print(primes2)
 
